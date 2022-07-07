@@ -1,0 +1,96 @@
+$primary: #14213d;
+$secondary: #272121;
+$background: #ece7f0;
+$white: #ffffff;
+
+body{
+  background-color: $background;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.App {
+  font-family: articulat-cf,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: $secondary;
+}
+
+.Home{
+  // margin-top: 30px;
+  margin-left: 270px;
+  height: 100vh;
+  background-color: $background;
+}
+
+.SmallText{
+  font-family: articulat-cf,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14pt;
+  color: rgb(85, 85, 85);
+}
+
+.Grid{
+  max-width: 1400px;
+  display: grid;
+  margin: 27px;
+  column-gap: 20px;
+  grid-template-areas: 
+  "a a a a"
+  "b b b b"
+  "c c e e"
+  "d d d d";
+  row-gap: 5px;
+}
+
+@media screen and (min-width: 900px){
+  .Grid{
+    max-width: 1400px;
+    display: grid;
+    margin: 27px;
+    column-gap: 20px;
+    grid-template-areas: 
+    "a a a a"
+    "b b b c"
+    "d d d e";
+    row-gap: 20px;
+  }
+  
+}
+
+.Title{
+  font-family: articulat-cf,sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  height: 80px;
+  grid-area: a;
+  width: 100%;
+  font-size: 5vh;
+}
+
+.Chart{
+  grid-area: b;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: -2px 2px 20px 2px rgba(0, 0, 0, .1);
+}
+
+.Activity{
+  grid-area: e;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: -2px 2px 20px 2px rgba(0, 0, 0, .1);
+}
+
+.Order{
+  grid-area: c;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: -2px 2px 20px 2px rgba(0, 0, 0, .1);
+}
+
+.Box{
+  height: 100px;
+  width: 100px;
+}
