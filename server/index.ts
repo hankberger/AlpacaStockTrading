@@ -2,16 +2,26 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const port: string = process.env.PORT || "8888";
+const Alpaca = require('@alpacahq/alpaca-trade-api');
 
-const greeting: string = "hello world 2";
+const alpaca = new Alpaca({
+    keyId: process.env.KEYID,
+    secretKey: process.env.SECRET,
+    paper: true,
+});
 
-console.log(greeting);
+app.get('/account', (req: any, res: any)=>{
+    alpaca.getAccount().then((account: JSON) => {
+        res.send(account);
+    });
+});
 
-console.log(process.env.KEYID);
-console.log(process.env.SECRET);
-
-app.get('/', (req,res)=>{
-    res.send("hello world");
+app.get('/history', (req: any, res: any)=>{
+    alpaca.getPortfolioHistory({
+        period: 'all',
+    }).then((history: JSON) => {
+        res.send(history);
+    });
 });
 
 app.listen(port, () => {
