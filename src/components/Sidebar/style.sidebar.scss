@@ -1,0 +1,99 @@
+$primary: #360568;
+$background: #faebff ;
+$secondary: rgb(200, 182, 255);
+
+.sidebar{
+    background-color: white;
+    border-radius: 0px 20px 0px 0px;
+    position: fixed;
+    top: 0px;
+    height: 100vh;
+    float: left;
+    width: 270px;
+    font-family: articulat-cf,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    box-shadow: -2px 2px 20px 2px rgba(0, 0, 0, .1);
+    justify-content: center;
+    align-items: center;
+}
+
+.logoContainer{
+    margin-top: 30px;
+    font-size: 25pt;
+    font-weight: 400;
+    color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    margin-top: 30px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    height: 100px;
+}
+
+// .breakline{
+//     width: 80%;
+//     background-color: rgb(132, 130, 130, .2);
+//     height: 2px;
+//     margin-bottom: 10px;
+// }
+
+.navLink{
+    font-weight:400;
+    margin: 10px;
+    display: flex;
+    width: 200px;
+    font-size: 15pt;
+    height: 50px;
+    align-items: center;
+    justify-content: left;
+    border-radius: 20px;
+    color: rgb(132, 130, 130);
+}
+
+.navLink:hover{
+    animation-name: mousehover;
+    animation-duration: .8s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+.active{ 
+    background-color: rgba(200, 182, 255, .5);
+    color: $primary;
+    font-weight: 600;
+}
+
+.navIcon{
+    margin: 0px 30px 0px 30px
+}
+
+// .active{
+//     background-color: white;
+//     color: $primary;
+//     border-radius: 7px;
+//     box-shadow: inset 0 0 5px $secondary;
+// }
+
+@keyframes mousehover{
+    0%{
+      
+    }
+
+    100%{
+        color: $primary;
+    }
+}
