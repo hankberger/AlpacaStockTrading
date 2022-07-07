@@ -70,6 +70,32 @@ a {
   margin: 0px 30px 0px 30px;
 }
 
+.bottom {
+  position: absolute;
+  bottom: 0px;
+}
+
+.flex {
+  display: flex;
+}
+
+.socialButton {
+  margin: 10px 15px;
+}
+
+.socialIcon > svg {
+  color: rgb(132, 130, 130);
+  height: 100%;
+  width: 100%;
+}
+
+.socialIcon > svg:hover {
+  animation-name: mousehover;
+  animation-duration: 0.6s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
 @keyframes mousehover {
   100% {
     color: #360568;
