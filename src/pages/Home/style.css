@@ -31,7 +31,7 @@ body {
   margin: 27px;
   column-gap: 20px;
   grid-template-areas: "a a a a" "b b b b" "c c e e" "d d d d";
-  row-gap: 5px;
+  row-gap: 20px;
 }
 
 @media screen and (min-width: 900px) {
